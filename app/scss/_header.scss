@@ -1,0 +1,96 @@
+.header {
+  position: relative;
+  margin-bottom: 7.5rem;
+  //Hamburger open styles
+  //If the header has class open >>
+  &.open {
+    .header__hamburger {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .overlay {
+    visibility: hidden;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient($darkBlue, transparent);
+  }
+  nav {
+    @include breakpoint-up(large) {
+      justify-content: space-around;
+    }
+    padding: 2.4rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: white;
+  }
+  &__logo {
+    img {
+      width: 14.1rem;
+      height: 2.2rem;
+    }
+  }
+  &__hamburger {
+    // Mobile menu
+    > span {
+      display: block;
+      width: 2.6rem;
+      height: 2px;
+      background-color: $darkBlue;
+      transition: all 300ms ease-in-out;
+      transform-origin: 3px 1px;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__links {
+    a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      transition: color 300ms ease-in-out;
+      &:not(:last-child) {
+        margin-right: 3.2rem;
+      }
+      &:hover {
+        color: $darkBlue;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid $limeGreen;
+      }
+    }
+  }
+  &__menu {
+    visibility: hidden;
+    z-index: 1;
+    background: $white;
+    padding: 2rem;
+    width: calc(100% - 5rem);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 2.6rem);
+    a {
+      display: block;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}
+@include breakpoint-up(large) {
+  .header__menu,
+  .overlay {
+    display: none;
+  }
+}
