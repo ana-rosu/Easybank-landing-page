@@ -41,13 +41,11 @@
     }
     h1 {
       line-height: 1.2;
-      font-weight: 300;
       font-size: clamp(3.5rem, 5vw, 5rem);
       color: $darkBlue;
     }
     p {
       text-align: start;
-      font-size: clamp(1.5rem, 1.7vw, 2rem);
       margin-bottom: 3.4rem;
     }
     button {

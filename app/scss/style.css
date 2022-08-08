@@ -80,6 +80,12 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+  color: hsl(233deg, 26%, 24%);
+  font-weight: 400;
+}
+
+p {
+  font-size: clamp(1.5rem, 1.7vw, 2rem);
 }
 
 .flex {
@@ -267,15 +273,32 @@ button:hover,
 }
 .hero__text h1 {
   line-height: 1.2;
-  font-weight: 300;
   font-size: clamp(3.5rem, 5vw, 5rem);
   color: hsl(233deg, 26%, 24%);
 }
 .hero__text p {
   text-align: start;
-  font-size: clamp(1.5rem, 1.7vw, 2rem);
   margin-bottom: 3.4rem;
 }
 .hero__text button {
   margin-bottom: 8.8rem;
+}
+
+.features {
+  background-color: hsl(220deg, 16%, 96%);
+  padding: 6rem 2.6rem;
+  text-align: center;
+}
+.features__text {
+  margin: 0 auto 6rem;
+}
+.features__item:not(:last-child) {
+  margin: 0 auto 3.5rem;
+}
+.features__icon, .features__title {
+  margin-bottom: 2rem;
+}
+.features__title {
+  color: hsl(233deg, 26%, 24%);
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

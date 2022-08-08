@@ -1,0 +1,20 @@
+.features {
+  background-color: $lightGrayishBlue;
+  padding: 6rem 2.6rem;
+  text-align: center;
+
+  &__text {
+    margin: 0 auto 6rem;
+  }
+  &__item:not(:last-child) {
+    margin: 0 auto 3.5rem;
+  }
+  &__icon,
+  &__title {
+    margin-bottom: 2rem;
+  }
+  &__title {
+    color: $darkBlue;
+    font-size: 2rem;
+  }
+}
