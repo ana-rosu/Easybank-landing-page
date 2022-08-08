@@ -1,0 +1,46 @@
+.articles {
+  background-color: $veryLightGray;
+  padding: 6rem 2.6rem;
+  h2 {
+    text-align: center;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__item {
+    margin: 0;
+    background: $white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+
+    img {
+      width: 100%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  &__text {
+    padding: 3rem 3rem 4.5rem;
+
+    figcaption {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+}

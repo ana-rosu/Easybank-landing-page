@@ -13,8 +13,15 @@
   &__title {
     margin-bottom: 2rem;
   }
-  &__title {
-    color: $darkBlue;
-    font-size: 2rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

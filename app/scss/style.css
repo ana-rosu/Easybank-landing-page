@@ -78,13 +78,15 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin-top: 0;
   color: hsl(233deg, 26%, 24%);
   font-weight: 400;
 }
 
 p {
+  margin-top: 0;
   font-size: clamp(1.5rem, 1.7vw, 2rem);
 }
 
@@ -103,7 +105,7 @@ p {
 
 button,
 .button {
-  padding: 1.3rem 3rem;
+  padding: 1.5rem 3rem;
   border-radius: 6rem;
   cursor: pointer;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
@@ -298,7 +300,102 @@ button:hover,
 .features__icon, .features__title {
   margin-bottom: 2rem;
 }
-.features__title {
-  color: hsl(233deg, 26%, 24%);
-  font-size: 2rem;
+.features__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40em) {
+  .features__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .features__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.articles {
+  background-color: hsl(0deg, 0%, 98%);
+  padding: 6rem 2.6rem;
+}
+.articles h2 {
+  text-align: center;
+}
+.articles__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+@media (min-width: 40em) {
+  .articles__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .articles__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.articles__item {
+  margin: 0;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+.articles__item img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.articles__item:hover {
+  transform: scale(1.03);
+}
+.articles__text {
+  padding: 3rem 3rem 4.5rem;
+}
+.articles__text figcaption {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.articles__text h4 {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: hsl(233deg, 26%, 24%);
+  padding: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.footer a {
+  color: hsl(0deg, 0%, 100%);
+}
+.footer__social {
+  margin: 3rem 0;
+}
+.footer__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__links a {
+  transition: color 200ms ease;
+}
+.footer__links a:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+.footer__links.col1 {
+  margin-bottom: 1.5rem;
+}
+.footer__btn {
+  margin: 3rem 0;
+}
+.footer__copyright {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+.footer {
+  background-color: $darkBlue;
+  padding: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  a {
+    color: $white;
+  }
+  &__logo {
+  }
+  &__social {
+    margin: 3rem 0;
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    a {
+      transition: color 200ms ease;
+      &:hover {
+        color: $limeGreen;
+      }
+    }
+    &.col1 {
+      margin-bottom: 1.5rem;
+    }
+    &.col2 {
+    }
+  }
+  &__btn {
+    margin: 3rem 0;
+  }
+  &__copyright {
+    margin-bottom: 1rem;
+  }
+  &__attribution {
+  }
+}
