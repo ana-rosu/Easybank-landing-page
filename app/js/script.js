@@ -1,8 +1,9 @@
 const header = document.querySelector(".header");
 const overlay = document.querySelector(".overlay");
 const headerLinks = document.querySelector(".header__links");
+const hamburger = document.querySelector(".header__hamburger");
 
-header.addEventListener("click", function () {
+hamburger.addEventListener("click", function () {
   if (header.classList.contains("open")) {
     //close menu
     header.classList.remove("open");
