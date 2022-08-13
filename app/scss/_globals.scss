@@ -1,6 +1,8 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
   @include breakpoint-up(xlarge) {
     font-size: 100%;
   }
