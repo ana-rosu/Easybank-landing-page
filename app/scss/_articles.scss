@@ -1,8 +1,10 @@
 .articles {
   background-color: $veryLightGray;
-  padding: 6rem 2.6rem;
   h2 {
     text-align: center;
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
   }
   &__wrapper {
     display: grid;

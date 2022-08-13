@@ -1,18 +1,30 @@
 .header {
-  position: relative;
   margin-bottom: 7.5rem;
   //Hamburger open styles
-  //If the header has class open >>
   &.open {
-    .header__hamburger {
-      > span:first-child {
-        transform: rotate(45deg);
+    .header {
+      &__hamburger {
+        > span:first-child {
+          transform: rotate(45deg);
+        }
+        > span:nth-child(2) {
+          opacity: 0;
+        }
+        > span:last-child {
+          transform: rotate(-45deg);
+        }
       }
-      > span:nth-child(2) {
-        opacity: 0;
-      }
-      > span:last-child {
-        transform: rotate(-45deg);
+      &__links {
+        background: $white;
+        padding: 2rem;
+        width: calc(100% - 5rem);
+        position: fixed;
+        top: 10rem;
+        a {
+          display: block;
+          text-align: center;
+          padding: 1rem;
+        }
       }
     }
   }
@@ -43,7 +55,26 @@
       height: 2.2rem;
     }
   }
+  &__links {
+    a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      transition: color 300ms ease-in-out;
+
+      @include breakpoint-up(large) {
+        &:not(:last-child) {
+          margin-right: 3.2rem;
+        }
+        &:hover {
+          color: $darkBlue;
+          padding-bottom: 1rem;
+          border-bottom: 3px solid $limeGreen;
+        }
+      }
+    }
+  }
   &__hamburger {
+    cursor: pointer;
     // Mobile menu
     > span {
       display: block;
@@ -56,41 +87,5 @@
         margin-bottom: 5px;
       }
     }
-  }
-  &__links {
-    a {
-      font-size: 1.6rem;
-      font-weight: 400;
-      transition: color 300ms ease-in-out;
-      &:not(:last-child) {
-        margin-right: 3.2rem;
-      }
-      &:hover {
-        color: $darkBlue;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid $limeGreen;
-      }
-    }
-  }
-  &__menu {
-    visibility: hidden;
-    z-index: 1;
-    background: $white;
-    padding: 2rem;
-    width: calc(100% - 5rem);
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 2.6rem);
-    a {
-      display: block;
-      text-align: center;
-      padding: 1rem;
-    }
-  }
-}
-@include breakpoint-up(large) {
-  .header__menu,
-  .overlay {
-    display: none;
   }
 }

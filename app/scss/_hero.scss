@@ -11,6 +11,9 @@
     background-size: cover;
     background-position: center center;
     min-height: 28rem;
+    @include breakpoint-up(medium) {
+      min-height: 34rem;
+    }
     @include breakpoint-up(large) {
       flex: 3;
       min-height: 67rem;
@@ -21,7 +24,6 @@
       content: "";
       background-image: url(/images/image-mockups.png);
       background-size: cover;
-      background-position: center bottom;
       position: absolute;
       left: 50%;
       transform: translate(-50%);
@@ -29,6 +31,7 @@
       width: 90%;
       @include breakpoint-up(large) {
         transform: translate(-30%);
+        height: 120%;
       }
     }
   }
@@ -38,6 +41,7 @@
     @include breakpoint-up(large) {
       flex: 2;
       text-align: left;
+      padding-left: 0;
     }
     h1 {
       line-height: 1.2;
@@ -49,7 +53,7 @@
       margin-bottom: 3.4rem;
     }
     button {
-      margin-bottom: 8.8rem;
+      margin-bottom: 6rem;
     }
   }
 }

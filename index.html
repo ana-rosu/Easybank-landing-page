@@ -25,12 +25,6 @@
         <a href="/" class="header__logo">
           <img src="images/logo.svg" alt="Easybank" />
         </a>
-
-        <a href="#" class="header__hamburger hide-for-desktop">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
         <div class="header__links hide-for-mobile">
           <a href="">Home</a>
           <a href="">About</a>
@@ -39,17 +33,15 @@
           <a href="">Careers</a>
         </div>
         <button type="button" class="hide-for-mobile">Request Invite</button>
+        <div class="header__hamburger hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
-      <div class="header__menu">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Blog</a>
-        <a href="">Careers</a>
-      </div>
     </header>
 
-    <section class="hero container">
+    <section class="hero container--px">
       <div class="hero__img"></div>
       <div class="hero__text">
         <h1>Next generation digital banking</h1>
@@ -62,7 +54,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features container--pall">
       <div class="features__text">
         <h2>Why choose Easybank?</h2>
         <p>
@@ -114,7 +106,7 @@
       </div>
     </section>
 
-    <section class="articles">
+    <section class="articles container--pall">
       <h2>Latest Articles</h2>
       <div class="articles__wrapper">
         <figure class="articles__item">
@@ -166,25 +158,27 @@
     </section>
 
     <footer class="footer">
-      <a class="footer__logo" href="#"
-        ><img src="/images/logo-white.svg" alt="logo"
-      /></a>
-      <div class="footer__social">
-        <a href="#"
-          ><img src="/images/icon-facebook.svg" alt="Facebook icon"
+      <div class="grid--child1">
+        <a class="footer__logo" href="#"
+          ><img src="/images/logo-white.svg" alt="logo"
         /></a>
-        <a href="#"
-          ><img src="/images/icon-youtube.svg" alt="Youtube icon"
-        /></a>
-        <a href="#"
-          ><img src="/images/icon-twitter.svg" alt="Twitter icon"
-        /></a>
-        <a href="#"
-          ><img src="/images/icon-pinterest.svg" alt="Pinterest icon"
-        /></a>
-        <a href="#"
-          ><img src="/images/icon-instagram.svg" alt="Instagram icon"
-        /></a>
+        <div class="footer__social">
+          <a href="#"
+            ><img src="/images/icon-facebook.svg" alt="Facebook icon"
+          /></a>
+          <a href="#"
+            ><img src="/images/icon-youtube.svg" alt="Youtube icon"
+          /></a>
+          <a href="#"
+            ><img src="/images/icon-twitter.svg" alt="Twitter icon"
+          /></a>
+          <a href="#"
+            ><img src="/images/icon-pinterest.svg" alt="Pinterest icon"
+          /></a>
+          <a href="#"
+            ><img src="/images/icon-instagram.svg" alt="Instagram icon"
+          /></a>
+        </div>
       </div>
       <div class="footer__links col1">
         <a href="#">About Us</a>
@@ -196,8 +190,12 @@
         <a href="#">Support</a>
         <a href="#">Privacy Policy</a>
       </div>
-      <button class="footer__btn">Request Invite</button>
-      <div class="footer__copyright">&copy; EasyBank. All Rights Reserved.</div>
+      <div class="grid--child4">
+        <button class="footer__btn">Request Invite</button>
+        <div class="footer__copyright">
+          &copy; EasyBank. All Rights Reserved.
+        </div>
+      </div>
       <div class="footer__attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

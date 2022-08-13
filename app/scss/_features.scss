@@ -1,13 +1,30 @@
 .features {
   background-color: $lightGrayishBlue;
-  padding: 6rem 2.6rem;
   text-align: center;
 
   &__text {
     margin: 0 auto 6rem;
+    h2 {
+      padding: 0 2rem;
+    }
+    @include breakpoint-up(large) {
+      width: 50%;
+      margin-left: 0;
+      h2 {
+        padding: 0;
+      }
+    }
   }
   &__item:not(:last-child) {
     margin: 0 auto 3.5rem;
+  }
+  &__icon {
+    img {
+      transition: all 200ms ease;
+    }
+    img:hover {
+      transform: scaleX(-1);
+    }
   }
   &__icon,
   &__title {
@@ -19,9 +36,13 @@
 
     @include breakpoint-up(medium) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
     }
     @include breakpoint-up(large) {
       grid-template-columns: repeat(4, 1fr);
     }
+  }
+  @include breakpoint-up(large) {
+    text-align: left;
   }
 }
